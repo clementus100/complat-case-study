@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collecta — UX Case Study · Clement Olatunde</title>
+<meta name="description" content="Collecta: a mobile-first receivables and cash-flow assistant for Nigerian microbusinesses, with a dignified customer side. UX case study by Clement Olatunde.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0E5E5A;--emerald:#1E7A62;--ink:#13262B;--slate:#4E5F63;--sand:#F5EFE6;--mist:#E7F1EF;--clay:#A8482F;--dusk:#36507A;--line:#D9D2C6}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--sand) 0%,var(--mist) 55%,var(--sand) 100%);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.hero{background:linear-gradient(135deg,var(--teal),var(--emerald));color:#fff;padding:56px 20px 44px}
+.hero .in,main{max-width:880px;margin:0 auto}
+.hero .tag{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.9;font-weight:600}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,6vw,52px);line-height:1.1;margin:10px 0 12px}
+.hero p{font-size:18px;max-width:640px;margin:0}
+main{padding:8px 20px 64px}
+main>h1:first-child,main>p:nth-child(2){display:none}
+h2{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--teal);font-size:28px;margin:44px 0 12px;line-height:1.2}
+h3{font-size:19px;margin:28px 0 8px;color:var(--ink)}
+a{color:var(--teal)}
+hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+blockquote{margin:16px 0;padding:14px 18px;background:#fff;border-left:5px solid var(--emerald);border-radius:12px;color:var(--ink)}
+blockquote p{margin:0}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;margin:14px 0;font-size:15px;box-shadow:0 1px 0 var(--line)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ECE6DC;vertical-align:top}
+th{background:var(--mist);color:var(--teal);font-weight:600}
+thead:has(th:empty){display:none}
+pre{background:var(--ink);color:#F5EFE6;padding:16px;border-radius:12px;overflow:auto;font-size:14px;line-height:1.5}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.92em}
+td code,p code,li code{background:var(--mist);color:var(--teal);padding:1px 6px;border-radius:6px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid rgba(0,0,0,.15)}
+.wrap{overflow-x:auto}
+footer{text-align:center;color:var(--slate);font-size:14px;padding:0 20px 40px}
+</style></head><body>
+<header class="hero"><div class="in"><div class="tag">UX Case Study · 2026 · Clement Olatunde</div><h1>Collecta</h1>
+<p>Helping Nigerian microbusinesses get paid for what they sell on credit, and helping their customers pay with dignity.</p></div></header>
+<main>
+<h1>Collecta — UX Case Study</h1>
+<p><strong>Helping Nigerian microbusinesses get paid for what they sell on credit, and helping their customers pay with dignity.</strong></p>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Clement Olatunde — UX/UI Designer (research, UX strategy, interaction &amp; visual design)</td>
+</tr>
+<tr>
+<td><strong>Year</strong></td>
+<td>2026</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Figma, FigJam</td>
+</tr>
+<tr>
+<td><strong>Platform</strong></td>
+<td>Mobile-first (Android first), with a light web link for customers</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Case study and design plan. High-fidelity screens (about 60) are being built in Figma next.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>1. Overview</h2>
+<p>Collecta is a mobile-first receivables and cash-flow assistant for Nigerian microbusinesses that sell on credit: tailors, food vendors, caterers, repair technicians, and other small traders.</p>
+<p>It sits in the gap between <strong>making a sale</strong> and <strong>actually receiving the money</strong>. It does not try to replace banks or payment apps.</p>
+<p>Collecta has two sides:</p>
+<ul>
+<li><strong>Seller app:</strong> record who owes what, send polite reminders, track partial payments, and see whether upcoming expenses can be covered.</li>
+<li><strong>Customer side:</strong> see what you owe, the terms you agreed, pay or promise a date, message the seller respectfully, and keep your receipts.</li>
+</ul>
+<blockquote>
+<p>The design hypothesis: combining debt tracking, respectful follow-up and cash-flow planning in one simple workflow, with the customer included, is more useful to informal businesses than conventional accounting software.</p>
+</blockquote>
+<hr />
+<h2>2. The problem</h2>
+<p><em>Illustrative scenario.</em> A tailor in Lagos finishes five customers' orders. Three promise to pay later. She still has to buy fabric, pay for electricity and cover transport, but her money is tied up in unpaid balances.</p>
+<p>She doesn't need another payment app. She needs to know, quickly:</p>
+<ul>
+<li><strong>Who</strong> owes the business money?</li>
+<li><strong>How much</strong> is outstanding, and <strong>when</strong> was payment promised?</li>
+<li><strong>Which</strong> customers need a reminder today?</li>
+<li><strong>Can</strong> the business afford its next expenses while it waits?</li>
+</ul>
+<p>The customer has a problem too. Debts are often tracked in the seller's head or notebook, so customers forget amounts, dispute balances, or feel embarrassed by blunt reminders. The relationship suffers, and so does repeat business.</p>
+<hr />
+<h2>3. Context &amp; secondary research</h2>
+<p><em>Secondary research — published surveys, cited as provided.</em></p>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PwC, 2024 Nigerian MSME survey</td>
+<td>Inadequate access to finance was the <strong>leading reported business-growth challenge for 35%</strong> of surveyed businesses.</td>
+</tr>
+<tr>
+<td>ACCA Nigeria survey (earlier)</td>
+<td><strong>59.9% of surveyed MSMEs</strong> had experienced <strong>delayed payments</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What this tells us:</strong> cash flow and late payment are real, widespread pressures for Nigerian small businesses.</p>
+<p><strong>What it does not tell us:</strong> it does not prove demand for Collecta specifically. That has to be validated with real sellers and customers (see Section 12).</p>
+<p><strong>Context assumptions to validate</strong></p>
+<ul>
+<li>Credit sales are agreed verbally and recorded in notebooks, in memory, or in WhatsApp chats.</li>
+<li>WhatsApp is the main channel between seller and customer.</li>
+<li>Many users have Android phones, expensive or unreliable data, and mixed literacy levels.</li>
+<li>Payments arrive by bank transfer, cash or POS, often in instalments.</li>
+</ul>
+<hr />
+<h2>4. Proto-personas</h2>
+<blockquote>
+<p><strong>Proto-personas (assumption-based, to be validated).</strong> They are built from the brief and secondary research, not from interview data.</p>
+</blockquote>
+<h3>Seller — "Adaeze", tailor, Lagos</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business</strong></td>
+<td>Runs a small tailoring shop with one apprentice. Often lets regular customers pay after collection.</td>
+</tr>
+<tr>
+<td><strong>Tools today</strong></td>
+<td>A notebook, her memory, WhatsApp chats, bank alerts on her phone.</td>
+</tr>
+<tr>
+<td><strong>Goals</strong></td>
+<td>Know who owes her at a glance. Get paid without losing customers. Buy fabric on time.</td>
+</tr>
+<tr>
+<td><strong>Frustrations</strong></td>
+<td>Forgets who paid part. Feels awkward chasing people. Runs short of cash for materials.</td>
+</tr>
+<tr>
+<td><strong>Needs from Collecta</strong></td>
+<td>Record a debt in seconds, reminders that sound polite, a clear "can I afford this week?" view.</td>
+</tr>
+<tr>
+<td><strong>Constraints</strong></td>
+<td>Busy hands, intermittent data, little time for "accounting".</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Customer — "Tunde", salaried worker, Lagos</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Situation</strong></td>
+<td>Buys clothes from Adaeze and food from a caterer on credit; paid at month-end.</td>
+</tr>
+<tr>
+<td><strong>Goals</strong></td>
+<td>Remember what he owes and to whom. Pay on time, or say honestly when he can't.</td>
+</tr>
+<tr>
+<td><strong>Frustrations</strong></td>
+<td>Unsure of the exact balance after part-payments. Blunt or public reminders feel embarrassing.</td>
+</tr>
+<tr>
+<td><strong>Needs from Collecta</strong></td>
+<td>One clear balance, the agreed terms, an easy way to pay or promise a date, proof he paid.</td>
+</tr>
+<tr>
+<td><strong>Constraints</strong></td>
+<td>Won't install another app just to see one balance. Wants privacy.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>5. Problem statements &amp; How Might We</h2>
+<p><strong>Seller:</strong> Adaeze needs a fast, reliable way to track money owed and follow up politely, because unpaid balances leave her short of cash for materials and bills.</p>
+<p><strong>Customer:</strong> Tunde needs a clear, private view of what he owes and an easy, respectful way to settle or reschedule, because unclear balances and blunt reminders strain the relationship.</p>
+<p><strong>How might we…</strong></p>
+<ol>
+<li>…let a seller record a credit sale in under a minute, even offline?</li>
+<li>…make reminders feel like a courtesy, not a confrontation?</li>
+<li>…show a seller whether expected payments will cover upcoming expenses?</li>
+<li>…let a customer see and act on a balance without installing an app?</li>
+<li>…give both sides one shared, trusted record so balances aren't disputed?</li>
+</ol>
+<hr />
+<h2>6. Competitive gap</h2>
+<p>General categories only. These are the tools sellers rely on today, not a named-competitor teardown.</p>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>What sellers use today</th>
+<th>Strengths</th>
+<th>Gaps Collecta targets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paper notebooks</strong></td>
+<td>Free, fast, no data needed</td>
+<td>No reminders, easy to lose, no totals, no forecast, customer can't see it</td>
+</tr>
+<tr>
+<td><strong>WhatsApp chats</strong></td>
+<td>Where customers already are</td>
+<td>Debts buried in chat, no running balance, reminders written from scratch each time</td>
+</tr>
+<tr>
+<td><strong>Bookkeeping / accounting apps</strong></td>
+<td>Records and reports</td>
+<td>Built for accounting, not follow-up; complex for informal traders; customer usually left out</td>
+</tr>
+<tr>
+<td><strong>Bank &amp; payment apps</strong></td>
+<td>Move money</td>
+<td>Show money received, not money owed or promised</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The gap:</strong> no simple tool joins <em>record → respectful reminder → partial payment → forecast</em>, with a customer-facing view, for informal businesses.</p>
+<hr />
+<h2>7. User journeys</h2>
+<h3>Seller journey: sale → record debt → reminder → partial payment → close</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What she does</th>
+<th>Thinking / feeling</th>
+<th>Design opportunity (screens)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Sale</td>
+<td>Hands over a finished outfit; customer will pay later</td>
+<td>"I'll remember… I hope."</td>
+<td>Quick-add from the home screen (DB-04)</td>
+</tr>
+<tr>
+<td>2. Record debt</td>
+<td>Enters customer, amount, due date, terms</td>
+<td>"This must be fast, a customer is waiting."</td>
+<td>Amount-first entry, contact pick, date chips (IN-01 → IN-05)</td>
+</tr>
+<tr>
+<td>3. Remind</td>
+<td>Due date arrives</td>
+<td>"I don't want to sound rude."</td>
+<td>Tone-selected template, WhatsApp preview, she sends it herself (RM-01 → RM-05)</td>
+</tr>
+<tr>
+<td>4. Partial payment</td>
+<td>Receives ₦10,000 of ₦25,000 by transfer</td>
+<td>"How much is left now?"</td>
+<td>Record partial payment, new balance shown at once (PY-01 → PY-03)</td>
+</tr>
+<tr>
+<td>5. Close</td>
+<td>Final payment arrives</td>
+<td>Relief</td>
+<td>Receipt shared, invoice settled (PY-05, PY-06)</td>
+</tr>
+<tr>
+<td>Throughout</td>
+<td>Plans fabric purchase</td>
+<td>"Can I afford this week?"</td>
+<td>Cash-flow forecast (CF-01)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Customer journey: receive reminder → view balance → pay or promise → receipt</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What he does</th>
+<th>Thinking / feeling</th>
+<th>Design opportunity (screens)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Reminder</td>
+<td>Gets a polite WhatsApp message with a private link</td>
+<td>"Oh, I'd forgotten. Glad it's polite."</td>
+<td>Respectful copy, private link (RM-03, CS-01)</td>
+</tr>
+<tr>
+<td>2. View balance</td>
+<td>Opens the link, verifies with OTP</td>
+<td>"How much exactly, and what did we agree?"</td>
+<td>Balance, terms, payment history (CS-02 → CS-04)</td>
+</tr>
+<tr>
+<td>3a. Pay</td>
+<td>Copies account details or uses a pay link</td>
+<td>"Easy."</td>
+<td>Pay now (CS-05)</td>
+</tr>
+<tr>
+<td>3b. Promise</td>
+<td>Can't pay today, picks a date or proposes instalments</td>
+<td>"At least I can be honest."</td>
+<td>Promise a date / ask for more time (CS-06, CS-07)</td>
+</tr>
+<tr>
+<td>4. Receipt</td>
+<td>Gets confirmation the seller recorded it</td>
+<td>"I have proof."</td>
+<td>Receipt and history (CS-09, CS-10)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>8. Information architecture</h2>
+<p><strong>Seller app: bottom navigation (5 tabs)</strong></p>
+<pre><code>Home ─────── Overview cards · Today's follow-ups · Notifications
+Customers ── List · Customer ledger · Statement
+  ( + ) ──── Quick add: Sale on credit · Payment received · Expense
+Cash flow ── 4-week forecast · Expenses · What-if · Monthly summary
+More ─────── Reminders &amp; templates · Invoices · Settings · Help
+</code></pre>
+<p><strong>Customer side: a light link (no install), 3 areas</strong></p>
+<pre><code>My balances ── Balance per seller → terms &amp; history
+Act ────────── Pay now · Promise a date · Ask for more time · Message seller
+Receipts ───── Receipts &amp; payment history
+</code></pre>
+<p>Navigation rules: the main jobs are at most two taps from Home; there is one primary action per screen; Back always returns to where you came from.</p>
+<h3>Planned screen inventory (60 screens)</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Flow</th>
+<th>Screens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Seller dashboard</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Invoices / debts</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Reminders</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Payments</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Cash flow</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Customer-side app</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Empty, error &amp; offline states</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>60</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Flow</th>
+<th>ID</th>
+<th>Screen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Onboarding</td>
+<td>ON-01</td>
+<td>Splash</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Onboarding</td>
+<td>ON-02</td>
+<td>Welcome — what Collecta does (3-card intro)</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Onboarding</td>
+<td>ON-03</td>
+<td>Choose your side: I sell / I owe a seller</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Onboarding</td>
+<td>ON-04</td>
+<td>Phone number sign-up</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Onboarding</td>
+<td>ON-05</td>
+<td>OTP verification</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Onboarding</td>
+<td>ON-06</td>
+<td>Business profile (name, trade, city)</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Onboarding</td>
+<td>ON-07</td>
+<td>Set PIN / fingerprint</td>
+</tr>
+<tr>
+<td>08</td>
+<td>Onboarding</td>
+<td>ON-08</td>
+<td>Language &amp; low-data mode</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Seller dashboard</td>
+<td>DB-01</td>
+<td>Home: outstanding, overdue, due today</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Seller dashboard</td>
+<td>DB-02</td>
+<td>Today's follow-ups queue</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Seller dashboard</td>
+<td>DB-03</td>
+<td>Notifications (promises, payments, failed sends)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Seller dashboard</td>
+<td>DB-04</td>
+<td>Quick-add sheet (sale on credit / payment / expense)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Customers</td>
+<td>CU-01</td>
+<td>Customer list (search, sort by amount owed)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Customers</td>
+<td>CU-02</td>
+<td>Add customer (manual or from contacts)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Customers</td>
+<td>CU-03</td>
+<td>Customer ledger (balance, history, notes)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Customers</td>
+<td>CU-04</td>
+<td>Shareable customer statement</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Customers</td>
+<td>CU-05</td>
+<td>Edit customer &amp; relationship notes</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Invoices / debts</td>
+<td>IN-01</td>
+<td>Record a sale on credit (amount-first)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Invoices / debts</td>
+<td>IN-02</td>
+<td>Add items or services (optional)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Invoices / debts</td>
+<td>IN-03</td>
+<td>Due date &amp; terms (one-off or instalments)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Invoices / debts</td>
+<td>IN-04</td>
+<td>Review &amp; confirm</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Invoices / debts</td>
+<td>IN-05</td>
+<td>Debt recorded — share with customer</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Invoices / debts</td>
+<td>IN-06</td>
+<td>Invoice detail</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Invoices / debts</td>
+<td>IN-07</td>
+<td>Edit / adjust invoice (with change log)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Invoices / debts</td>
+<td>IN-08</td>
+<td>All invoices (filters: due, overdue, part-paid, settled)</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Reminders</td>
+<td>RM-01</td>
+<td>Reminder composer (tone: friendly / gentle nudge / firm &amp; respectful)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Reminders</td>
+<td>RM-02</td>
+<td>Template library</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Reminders</td>
+<td>RM-03</td>
+<td>WhatsApp preview before sending</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Reminders</td>
+<td>RM-04</td>
+<td>Schedule a reminder</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Reminders</td>
+<td>RM-05</td>
+<td>Reminder sent — log entry</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Reminders</td>
+<td>RM-06</td>
+<td>Reminder history per customer</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Payments</td>
+<td>PY-01</td>
+<td>Record payment (full or partial)</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Payments</td>
+<td>PY-02</td>
+<td>Payment method (cash, transfer, POS)</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Payments</td>
+<td>PY-03</td>
+<td>Partial payment — new balance</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Payments</td>
+<td>PY-04</td>
+<td>Customer promised a date</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Payments</td>
+<td>PY-05</td>
+<td>Receipt generated &amp; shared</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Payments</td>
+<td>PY-06</td>
+<td>Invoice settled — closed</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Cash flow</td>
+<td>CF-01</td>
+<td>Cash-flow forecast (next 4 weeks)</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Cash flow</td>
+<td>CF-02</td>
+<td>Add upcoming expense</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Cash flow</td>
+<td>CF-03</td>
+<td>Expenses list</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Cash flow</td>
+<td>CF-04</td>
+<td>What-if: a customer pays late</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Cash flow</td>
+<td>CF-05</td>
+<td>Monthly summary</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Customer-side app</td>
+<td>CS-01</td>
+<td>Link landing from WhatsApp (no install needed)</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Customer-side app</td>
+<td>CS-02</td>
+<td>Verify with OTP</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Customer-side app</td>
+<td>CS-03</td>
+<td>My balances (all sellers)</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Customer-side app</td>
+<td>CS-04</td>
+<td>Balance with one seller (agreed terms, history)</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Customer-side app</td>
+<td>CS-05</td>
+<td>Pay now (copy account details / pay link)</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Customer-side app</td>
+<td>CS-06</td>
+<td>Promise a payment date</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Customer-side app</td>
+<td>CS-07</td>
+<td>Ask for more time / propose instalments</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Customer-side app</td>
+<td>CS-08</td>
+<td>Message the seller (respectful presets)</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Customer-side app</td>
+<td>CS-09</td>
+<td>My receipt</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Customer-side app</td>
+<td>CS-10</td>
+<td>My payment history</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Settings</td>
+<td>ST-01</td>
+<td>Settings home</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Settings</td>
+<td>ST-02</td>
+<td>Business &amp; bank details</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Settings</td>
+<td>ST-03</td>
+<td>Reminder tone &amp; language defaults</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Settings</td>
+<td>ST-04</td>
+<td>Privacy, backup &amp; export</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Empty, error &amp; offline states</td>
+<td>SX-01</td>
+<td>First-use empty dashboard (guided first entry)</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Empty, error &amp; offline states</td>
+<td>SX-02</td>
+<td>No customers / no debts yet</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Empty, error &amp; offline states</td>
+<td>SX-03</td>
+<td>Offline — saved on phone, will sync</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Empty, error &amp; offline states</td>
+<td>SX-04</td>
+<td>Error — reminder or sync failed (retry, keep draft)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>9. Design principles (empathy first)</h2>
+<ol>
+<li><strong>Reminders that keep the relationship.</strong> Every reminder template is courteous by default ("Good afternoon Tunde, a gentle reminder…"). The seller reviews and sends it from her own WhatsApp; nothing goes out automatically. There are no shaming words, no red "DEBTOR" labels, and no public lists.</li>
+<li><strong>Dignity for customers.</strong> Balances are private behind an OTP link. "Promise a date" and "Ask for more time" are first-class actions, not failures, and the customer's own words are offered as respectful presets.</li>
+<li><strong>One shared truth.</strong> Seller and customer see the same balance and the same history. Edits are logged, which reduces disputes.</li>
+<li><strong>Low literacy, low data.</strong> Amount-first number pads, icons paired with short labels, date chips (Today, Friday, Month-end), English and Nigerian Pidgin copy with Yoruba, Hausa and Igbo as planned languages. Works offline and syncs later. Light screens, no heavy images.</li>
+<li><strong>Accessible by default.</strong> WCAG 2.1 AA contrast (4.5:1 for body text), 48 dp touch targets, minimum 16 px body text, status never shown by colour alone (always icon + label), screen-reader labels.</li>
+<li><strong>Naira done right.</strong> Always ₦ with thousands separators (₦185,000), no kobo unless entered, and large, legible balances.</li>
+<li><strong>Calm, not alarming.</strong> Overdue is shown in a muted clay, not alarm-red, with a clear next step beside it.</li>
+</ol>
+<hr />
+<h2>10. Visual direction</h2>
+<p><strong>Mood:</strong> calm, trustworthy, warm, closer to a well-kept ledger book than a flashy fintech. A deep teal/emerald family on warm sand, with blended (not clashing) status colours. No gold.</p>
+<h3>Palette</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Use</th>
+<th>Contrast (measured)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deep Teal (primary)</td>
+<td><span class="sw" style="background:#0E5E5A"></span><code>#0E5E5A</code></td>
+<td>Primary buttons, headers, key numbers</td>
+<td>7.59:1 on white, 6.64:1 on Sand — AA</td>
+</tr>
+<tr>
+<td>Emerald</td>
+<td><span class="sw" style="background:#1E7A62"></span><code>#1E7A62</code></td>
+<td>Paid / success, positive trend</td>
+<td>5.23:1 on white — AA; 4.53:1 on its tint <code>#E3F2EC</code> — AA</td>
+</tr>
+<tr>
+<td>Ink</td>
+<td><span class="sw" style="background:#13262B"></span><code>#13262B</code></td>
+<td>Body text, headings</td>
+<td>15.67:1 on white — AAA</td>
+</tr>
+<tr>
+<td>Slate</td>
+<td><span class="sw" style="background:#4E5F63"></span><code>#4E5F63</code></td>
+<td>Secondary text, captions</td>
+<td>6.69:1 on white, 5.85:1 on Sand — AA</td>
+</tr>
+<tr>
+<td>Sand</td>
+<td><span class="sw" style="background:#F5EFE6"></span><code>#F5EFE6</code></td>
+<td>App background (warm)</td>
+<td>surface</td>
+</tr>
+<tr>
+<td>Mist</td>
+<td><span class="sw" style="background:#E7F1EF"></span><code>#E7F1EF</code></td>
+<td>Cards and selected states (cool tint)</td>
+<td>Deep Teal on Mist 6.59:1 — AA</td>
+</tr>
+<tr>
+<td>Clay</td>
+<td><span class="sw" style="background:#A8482F"></span><code>#A8482F</code></td>
+<td>Overdue (calm, non-alarm)</td>
+<td>5.78:1 on white; 4.85:1 on its tint <code>#F8E8E2</code> — AA</td>
+</tr>
+<tr>
+<td>Dusk</td>
+<td><span class="sw" style="background:#36507A"></span><code>#36507A</code></td>
+<td>Due soon / info / promised</td>
+<td>8.12:1 on white; 6.91:1 on tint <code>#E8EDF5</code> — AA</td>
+</tr>
+<tr>
+<td>Line</td>
+<td><span class="sw" style="background:#D9D2C6"></span><code>#D9D2C6</code></td>
+<td>Dividers and borders only (not text)</td>
+<td>decorative</td>
+</tr>
+<tr>
+<td>White</td>
+<td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td>
+<td>Cards, text on Deep Teal</td>
+<td>white on Deep Teal 7.59:1 — AA</td>
+</tr>
+</tbody>
+</table></div>
+<p>Blend: the background shifts from Sand to Mist across sections. The primary hero card uses a soft gradient from <code>#0E5E5A</code> to <code>#1E7A62</code>, with white text kept at ≥ 5.2:1 at the lightest point.</p>
+<h3>Typography</h3>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Font</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headings &amp; big balances</td>
+<td><strong>Fraunces</strong> (soft serif, 600)</td>
+<td>Gives the "ledger" elegance; used sparingly for H1/H2 and the hero balance</td>
+</tr>
+<tr>
+<td>Body &amp; UI</td>
+<td><strong>Inter</strong> (400 / 500 / 600)</td>
+<td>Tabular figures for amounts so columns of Naira line up</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>32 / 24 / 20 / 16 / 14</td>
+<td>Minimum body text 16 px; 8-pt spacing grid; 4-column mobile grid, 16 px margins</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Components (planned)</h3>
+<p>Balance card · status chip (icon + label: Due today, Overdue, Part-paid, Promised, Settled) · customer row · number pad · date chips · tone selector · WhatsApp preview bubble · forecast bar chart · bottom sheet · offline banner.</p>
+<p><em>Illustrative dashboard data used in mock-ups: total outstanding ₦185,000; overdue ₦65,000; Customer A, Invoice #001, due today, ₦25,000; Customer B, Invoice #002, 7 days overdue, ₦40,000. These are illustrative figures for a proposed design, not live business data.</em></p>
+<hr />
+<h2>11. Key design decisions</h2>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner reviews and sends every reminder</td>
+<td>Keeps the relationship human, and the seller in control of tone and timing</td>
+</tr>
+<tr>
+<td>Customer side is a link, not a required app</td>
+<td>Lowers the barrier: one tap from WhatsApp, OTP for privacy</td>
+</tr>
+<tr>
+<td>"Promise a date" is a positive action</td>
+<td>Turns avoidance into communication; gives the seller forecast data</td>
+</tr>
+<tr>
+<td>Amount-first recording</td>
+<td>The amount is the one thing a busy seller always knows; everything else is optional</td>
+</tr>
+<tr>
+<td>Offline-first</td>
+<td>Data is costly and patchy; nothing should be lost when the network drops</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>12. Planned research &amp; testing</h2>
+<p><strong>Primary research (planned):</strong></p>
+<ul>
+<li><strong>Interviews:</strong> 8–12 small-business owners who sell on credit (tailors, food vendors, caterers, repair technicians, and others), plus a smaller set of their customers.</li>
+<li><strong>Topics:</strong> how debts are recorded today, how payment is chased, what feels rude or respectful, how expenses are planned, phone, data and literacy constraints.</li>
+<li><strong>Synthesis:</strong> affinity mapping in FigJam, then refining the proto-personas and journeys from the evidence.</li>
+</ul>
+<p><strong>Usability testing (planned, Figma prototype):</strong></p>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Record a ₦25,000 credit sale due Friday</td>
+<td>Task completion, time on task, errors</td>
+</tr>
+<tr>
+<td>Send a polite reminder to an overdue customer</td>
+<td>Completion, taps, perceived tone</td>
+</tr>
+<tr>
+<td>Record a ₦10,000 partial payment and state the new balance</td>
+<td>Completion, comprehension</td>
+</tr>
+<tr>
+<td>From the dashboard, say how much is outstanding and overdue</td>
+<td>Comprehension accuracy</td>
+</tr>
+<tr>
+<td>(Customer) Open a reminder link, check the balance, promise a date</td>
+<td>Completion, errors, perceived dignity</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>13. Success metrics (targets, not results)</h2>
+<div class="wrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Record a credit sale</td>
+<td>≥ 90% complete unaided, in under 60 seconds</td>
+</tr>
+<tr>
+<td>Send a reminder</td>
+<td>≤ 3 taps from the dashboard; ≥ 90% completion</td>
+</tr>
+<tr>
+<td>Balance comprehension</td>
+<td>≥ 85% correctly state outstanding and overdue amounts</td>
+</tr>
+<tr>
+<td>Customer pay / promise flow</td>
+<td>≥ 85% complete without help</td>
+</tr>
+<tr>
+<td>Reminder tone</td>
+<td>≥ 80% of sellers and customers rate it "polite / respectful"</td>
+</tr>
+<tr>
+<td>Overall usability</td>
+<td>SUS score ≥ 75</td>
+</tr>
+<tr>
+<td>Post-launch indicators</td>
+<td>Share of debts closed on time; average days to payment; weekly active sellers</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>14. Next steps</h2>
+<ol>
+<li>Build the 60 high-fidelity screens in Figma, using this palette, type scale and inventory.</li>
+<li>Create the component library and auto-layout system (all screens aligned to the 8-pt grid).</li>
+<li>Prototype the two core journeys (seller and customer) end to end.</li>
+<li>Run the interviews and usability tests above; iterate on findings.</li>
+<li>Update this case study with research evidence, final screens and test results.</li>
+</ol>
+<hr />
+<p><em>Case study by Clement Olatunde, UX/UI Designer, Akure, Nigeria · 2026.</em></p>
+</main>
+<footer>Collecta UX case study · Clement Olatunde, UX/UI Designer · Akure, Nigeria</footer>
+</body></html>
