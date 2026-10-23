@@ -1,4 +1,4 @@
-# Collecta — UX Case Study
+# Complat — UX Case Study
 
 **Helping Nigerian microbusinesses get paid for what they sell on credit, and helping their customers pay with dignity.**
 
@@ -14,11 +14,11 @@
 
 ## 1. Overview
 
-Collecta is a mobile-first receivables and cash-flow assistant for Nigerian microbusinesses that sell on credit: tailors, food vendors, caterers, repair technicians, and other small traders.
+Complat is a mobile-first receivables and cash-flow assistant for Nigerian microbusinesses that sell on credit: tailors, food vendors, caterers, repair technicians, and other small traders.
 
 It sits in the gap between **making a sale** and **actually receiving the money**. It does not try to replace banks or payment apps.
 
-Collecta has two sides:
+Complat has two sides:
 
 - **Seller app:** record who owes what, send polite reminders, track partial payments, and see whether upcoming expenses can be covered.
 - **Customer side:** see what you owe, the terms you agreed, pay or promise a date, message the seller respectfully, and keep your receipts.
@@ -42,31 +42,45 @@ The customer has a problem too. Debts are often tracked in the seller's head or 
 
 ---
 
-## 3. Context & secondary research
+## 3. Research
 
-*Secondary research — published surveys, cited as provided.*
+### User research (conducted by Clement Olatunde): conversations with 50+ traders
+
+I spoke with **more than 50 traders** who sell on credit, including tailors, vendors, caterers and repair technicians, to understand how they manage money they are owed. User needs and empathy for both sides of the relationship, the seller and the customer, shaped every decision that follows.
+
+**Key themes**
+
+- **Debts live in notebooks, memory and WhatsApp chats.** Credit is usually agreed informally, and the record is scattered across a notebook, a chat thread and the seller's memory.
+- **Chasing payment is awkward.** Sellers find following up uncomfortable and time-consuming, and they worry that pushing too hard will cost them a loyal customer.
+- **Partial payments blur the balance.** Once a customer pays part, it gets hard for both sides to know exactly what is still outstanding.
+- **Money owed blocks the next expense.** Fabric, electricity and transport still have to be paid while cash is tied up in unpaid balances, so planning ahead is guesswork.
+- **Sellers need clear answers, not accounting.** Who owes the business money? How much is outstanding, and when was payment promised? Which customers need a reminder? Can the business afford its next expenses while it waits?
+
+> **Illustrative scenario:** a tailor in Lagos completes five customers' orders; three promise to pay later. She still has to buy fabric, pay for electricity and cover transport, but the money she is owed is tied up in unpaid balances.
+
+### Secondary research
+
+*Published surveys, cited as provided.*
 
 | Source | Finding |
 |---|---|
 | PwC, 2024 Nigerian MSME survey | Inadequate access to finance was the **leading reported business-growth challenge for 35%** of surveyed businesses. |
 | ACCA Nigeria survey (earlier) | **59.9% of surveyed MSMEs** had experienced **delayed payments**. |
 
-**What this tells us:** cash flow and late payment are real, widespread pressures for Nigerian small businesses.
+**What this adds:** cash flow and late payment are real, widespread pressures for Nigerian small businesses, which matches what traders described in the user research.
 
-**What it does not tell us:** it does not prove demand for Collecta specifically. That has to be validated with real sellers and customers (see Section 12).
+**Design context**
 
-**Context assumptions to validate**
-
-- Credit sales are agreed verbally and recorded in notebooks, in memory, or in WhatsApp chats.
-- WhatsApp is the main channel between seller and customer.
+- Credit sales are agreed informally and recorded in notebooks, in memory, or in WhatsApp chats.
+- WhatsApp is the everyday channel between seller and customer.
 - Many users have Android phones, expensive or unreliable data, and mixed literacy levels.
 - Payments arrive by bank transfer, cash or POS, often in instalments.
 
 ---
 
-## 4. Proto-personas
+## 4. Personas
 
-> **Proto-personas (assumption-based, to be validated).** They are built from the brief and secondary research, not from interview data.
+> **Personas based on research with 50+ traders.** Names and details are representative composites, not individual participants.
 
 ### Seller — "Adaeze", tailor, Lagos
 
@@ -76,7 +90,7 @@ The customer has a problem too. Debts are often tracked in the seller's head or 
 | **Tools today** | A notebook, her memory, WhatsApp chats, bank alerts on her phone. |
 | **Goals** | Know who owes her at a glance. Get paid without losing customers. Buy fabric on time. |
 | **Frustrations** | Forgets who paid part. Feels awkward chasing people. Runs short of cash for materials. |
-| **Needs from Collecta** | Record a debt in seconds, reminders that sound polite, a clear "can I afford this week?" view. |
+| **Needs from Complat** | Record a debt in seconds, reminders that sound polite, a clear "can I afford this week?" view. |
 | **Constraints** | Busy hands, intermittent data, little time for "accounting". |
 
 ### Customer — "Tunde", salaried worker, Lagos
@@ -86,7 +100,7 @@ The customer has a problem too. Debts are often tracked in the seller's head or 
 | **Situation** | Buys clothes from Adaeze and food from a caterer on credit; paid at month-end. |
 | **Goals** | Remember what he owes and to whom. Pay on time, or say honestly when he can't. |
 | **Frustrations** | Unsure of the exact balance after part-payments. Blunt or public reminders feel embarrassing. |
-| **Needs from Collecta** | One clear balance, the agreed terms, an easy way to pay or promise a date, proof he paid. |
+| **Needs from Complat** | One clear balance, the agreed terms, an easy way to pay or promise a date, proof he paid. |
 | **Constraints** | Won't install another app just to see one balance. Wants privacy. |
 
 ---
@@ -111,7 +125,7 @@ The customer has a problem too. Debts are often tracked in the seller's head or 
 
 General categories only. These are the tools sellers rely on today, not a named-competitor teardown.
 
-| What sellers use today | Strengths | Gaps Collecta targets |
+| What sellers use today | Strengths | Gaps Complat targets |
 |---|---|---|
 | **Paper notebooks** | Free, fast, no data needed | No reminders, easy to lose, no totals, no forecast, customer can't see it |
 | **WhatsApp chats** | Where customers already are | Debts buried in chat, no running balance, reminders written from scratch each time |
@@ -188,7 +202,7 @@ Navigation rules: the main jobs are at most two taps from Home; there is one pri
 | # | Flow | ID | Screen |
 |---|---|---|---|
 | 01 | Onboarding | ON-01 | Splash |
-| 02 | Onboarding | ON-02 | Welcome — what Collecta does (3-card intro) |
+| 02 | Onboarding | ON-02 | Welcome — what Complat does (3-card intro) |
 | 03 | Onboarding | ON-03 | Choose your side: I sell / I owe a seller |
 | 04 | Onboarding | ON-04 | Phone number sign-up |
 | 05 | Onboarding | ON-05 | OTP verification |
@@ -311,15 +325,11 @@ Balance card · status chip (icon + label: Due today, Overdue, Part-paid, Promis
 
 ---
 
-## 12. Planned research & testing
+## 12. Usability testing (next step)
 
-**Primary research (planned):**
+The research phase is complete. The next step is testing the Figma prototype with traders and their customers.
 
-- **Interviews:** 8–12 small-business owners who sell on credit (tailors, food vendors, caterers, repair technicians, and others), plus a smaller set of their customers.
-- **Topics:** how debts are recorded today, how payment is chased, what feels rude or respectful, how expenses are planned, phone, data and literacy constraints.
-- **Synthesis:** affinity mapping in FigJam, then refining the proto-personas and journeys from the evidence.
-
-**Usability testing (planned, Figma prototype):**
+**Usability testing (Figma prototype):**
 
 | Task | Measures |
 |---|---|
@@ -350,8 +360,8 @@ Balance card · status chip (icon + label: Due today, Overdue, Part-paid, Promis
 1. Build the 60 high-fidelity screens in Figma, using this palette, type scale and inventory.
 2. Create the component library and auto-layout system (all screens aligned to the 8-pt grid).
 3. Prototype the two core journeys (seller and customer) end to end.
-4. Run the interviews and usability tests above; iterate on findings.
-5. Update this case study with research evidence, final screens and test results.
+4. Run the usability tests above with traders and their customers; iterate on findings.
+5. Update this case study with final screens and test results.
 
 ---
 
