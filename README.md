@@ -8,7 +8,7 @@
 | **Year** | 2026 |
 | **Tools** | Figma, FigJam |
 | **Platform** | Mobile-first (Android first), with a light web link for customers |
-| **Status** | Case study and design plan. High-fidelity screens (about 60) are being built in Figma next. |
+| **Status** | 60 high-fidelity screens designed in Figma ([view all 60 screens in Figma](https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/)). Usability testing is next. |
 
 ---
 
@@ -272,30 +272,29 @@ Navigation rules: the main jobs are at most two taps from Home; there is one pri
 4. **Low literacy, low data.** Amount-first number pads, icons paired with short labels, date chips (Today, Friday, Month-end), English and Nigerian Pidgin copy with Yoruba, Hausa and Igbo as planned languages. Works offline and syncs later. Light screens, no heavy images.
 5. **Accessible by default.** WCAG 2.1 AA contrast (4.5:1 for body text), 48 dp touch targets, minimum 16 px body text, status never shown by colour alone (always icon + label), screen-reader labels.
 6. **Naira done right.** Always ₦ with thousands separators (₦185,000), no kobo unless entered, and large, legible balances.
-7. **Calm, not alarming.** Overdue is shown in a muted clay, not alarm-red, with a clear next step beside it.
+7. **Calm, not alarming.** Overdue is shown as a polite chip (Deep Red text on a soft red tint, with a clock icon), never an alarm, with a clear next step beside it.
 
 ---
 
 ## 10. Visual direction
 
-**Mood:** calm, trustworthy, warm, closer to a well-kept ledger book than a flashy fintech. A deep teal/emerald family on warm sand, with blended (not clashing) status colours. No gold.
+**Mood:** warm, energetic and market-friendly, like a busy, well-run shop: orange, red and white, white-dominant so it stays clean and elegant. No green, per the designer's direction. Status colours blend within the same warm family.
 
 ### Palette
 
-| Token | Hex | Use | Contrast (measured) |
+| Token | Hex | Use | Contrast (measured, WCAG AA 4.5:1) |
 |---|---|---|---|
-| Deep Teal (primary) | `#0E5E5A` | Primary buttons, headers, key numbers | 7.59:1 on white, 6.64:1 on Sand — AA |
-| Emerald | `#1E7A62` | Paid / success, positive trend | 5.23:1 on white — AA; 4.53:1 on its tint `#E3F2EC` — AA |
-| Ink | `#13262B` | Body text, headings | 15.67:1 on white — AAA |
-| Slate | `#4E5F63` | Secondary text, captions | 6.69:1 on white, 5.85:1 on Sand — AA |
-| Sand | `#F5EFE6` | App background (warm) | surface |
-| Mist | `#E7F1EF` | Cards and selected states (cool tint) | Deep Teal on Mist 6.59:1 — AA |
-| Clay | `#A8482F` | Overdue (calm, non-alarm) | 5.78:1 on white; 4.85:1 on its tint `#F8E8E2` — AA |
-| Dusk | `#36507A` | Due soon / info / promised | 8.12:1 on white; 6.91:1 on tint `#E8EDF5` — AA |
-| Line | `#D9D2C6` | Dividers and borders only (not text) | decorative |
-| White | `#FFFFFF` | Cards, text on Deep Teal | white on Deep Teal 7.59:1 — AA |
+| White (background) | `#FFFFFF` | App and page background | Text sits on it: Ink 17.88:1, Warm Slate 8.19:1, Burnt Orange 5.18:1 — AA |
+| Peach Mist | `#FFF4EC` | Cards and surfaces | Burnt Orange on Peach Mist 4.78:1 — AA; Ink 16.52:1 |
+| Line | `#F3DCCB` | Dividers and borders only (not text) | decorative |
+| Burnt Orange (primary) | `#C2410C` | Primary buttons, active nav, headings, key numbers | 5.18:1 on white, 4.78:1 on Peach Mist — AA; white text on it 5.18:1 |
+| Bright Orange | `#F97316` | Charts, progress and highlights only — never text | decorative (not used for text) |
+| Deep Red (secondary) | `#B42318` | Secondary accent and emphasis; header gradient `#C2410C` → `#B42318` | white on Deep Red 6.57:1 — AA |
+| Soft Red tint | `#FDECEA` | Polite overdue chips (with clock icon), Deep Red text | Deep Red on its tint 5.75:1 — AA |
+| Ink | `#1F1512` | Body text, headings | 17.88:1 on white — AAA |
+| Warm Slate | `#5E4B43` | Secondary text, captions | 8.19:1 on white — AA |
 
-Blend: the background shifts from Sand to Mist across sections. The primary hero card uses a soft gradient from `#0E5E5A` to `#1E7A62`, with white text kept at ≥ 5.2:1 at the lightest point.
+Paid / settled: a Burnt Orange check icon with "Paid" in Ink on Peach Mist (status is never shown by colour alone). Overdue: Deep Red text on the Soft Red tint with a clock icon and polite copy. Headers and the hero balance card use a gradient from `#C2410C` to `#B42318`, with white text at ≥ 5.18:1 at the lightest point.
 
 ### Typography
 
@@ -310,6 +309,34 @@ Blend: the background shifts from Sand to Mist across sections. The primary hero
 Balance card · status chip (icon + label: Due today, Overdue, Part-paid, Promised, Settled) · customer row · number pad · date chips · tone selector · WhatsApp preview bubble · forecast bar chart · bottom sheet · offline banner.
 
 *Illustrative dashboard data used in mock-ups: total outstanding ₦185,000; overdue ₦65,000; Customer A, Invoice #001, due today, ₦25,000; Customer B, Invoice #002, 7 days overdue, ₦40,000. These are illustrative figures for a proposed design, not live business data.*
+
+---
+
+## Final UI
+
+The 60 high-fidelity screens, built in Figma in the orange, red and white palette.
+
+**[View all 60 screens in Figma →](https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/)**
+
+![Overview of all 60 Complat screens in ten flows: onboarding, seller dashboard, customers, invoices and debts, reminders, payments, cash flow, customer side, settings, and empty, error and offline states, in orange, red and white](images/complat-overview-60-screens.jpg)
+
+### Close-ups
+
+**Seller dashboard (DB-01) and Today's follow-ups**
+
+![Seller dashboard (DB-01): an orange-to-red balance card with the total owed, quick actions and today's follow-ups with status chips; beside it, the Today's follow-ups list](images/closeup-dashboard-DB-01.jpg)
+
+**Sale on credit (IN-01) and optional items**
+
+![Sale on credit (IN-01): amount-first entry of ₦25,000 for Tunde Bakare with a number pad and a Burnt Orange Next: due date button; beside it, optional line items totalling ₦25,000](images/closeup-add-debt-IN-01.jpg)
+
+**Gentle reminder (RM-01) and reminder templates**
+
+![Gentle reminder (RM-01): tone choice (Friendly, Gentle nudge, Firm & kind), a polite WhatsApp message to Chioma Eze about a ₦40,000 balance, a tone check and a Preview on WhatsApp button; beside it, reminder templates including one in Pidgin](images/closeup-reminder-RM-01.jpg)
+
+**Customer side: My balances, a seller's balance (CS-04) and Pay now**
+
+![Customer side: My balances (₦46,000 to 3 sellers) on an orange-to-red card, a seller balance of ₦25,000 with Pay now, Promise a date and More time, and the Pay now screen with bank transfer details](images/closeup-customer-balance-CS-04.jpg)
 
 ---
 
@@ -357,11 +384,11 @@ The research phase is complete. The next step is testing the Figma prototype wit
 
 ## 14. Next steps
 
-1. Build the 60 high-fidelity screens in Figma, using this palette, type scale and inventory.
+1. ~~Build the 60 high-fidelity screens in Figma~~ Done: [all 60 screens in Figma](https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/), in the orange, red and white palette above.
 2. Create the component library and auto-layout system (all screens aligned to the 8-pt grid).
 3. Prototype the two core journeys (seller and customer) end to end.
 4. Run the usability tests above with traders and their customers; iterate on findings.
-5. Update this case study with final screens and test results.
+5. Update this case study with test results.
 
 ---
 

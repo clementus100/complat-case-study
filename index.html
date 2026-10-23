@@ -5,31 +5,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--teal:#0E5E5A;--emerald:#1E7A62;--ink:#13262B;--slate:#4E5F63;--sand:#F5EFE6;--mist:#E7F1EF;--clay:#A8482F;--dusk:#36507A;--line:#D9D2C6}
+:root{--orange:#C2410C;--bright:#F97316;--red:#B42318;--redtint:#FDECEA;--ink:#1F1512;--slate:#5E4B43;--peach:#FFF4EC;--line:#F3DCCB;--white:#FFFFFF}
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,var(--sand) 0%,var(--mist) 55%,var(--sand) 100%);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
-.hero{background:linear-gradient(135deg,var(--teal),var(--emerald));color:#fff;padding:56px 20px 44px}
+body{margin:0;background:var(--white);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.hero{background:linear-gradient(135deg,var(--orange),var(--red));color:#fff;padding:56px 20px 44px}
 .hero .in,main{max-width:880px;margin:0 auto}
-.hero .tag{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.9;font-weight:600}
+.hero .tag{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.95;font-weight:600}
 .hero h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,6vw,52px);line-height:1.1;margin:10px 0 12px}
 .hero p{font-size:18px;max-width:640px;margin:0}
+.hero a{color:#fff}
 main{padding:8px 20px 64px}
 main>h1:first-child,main>p:nth-child(2){display:none}
-h2{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--teal);font-size:28px;margin:44px 0 12px;line-height:1.2}
+h2{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--orange);font-size:28px;margin:44px 0 12px;line-height:1.2}
 h3{font-size:19px;margin:28px 0 8px;color:var(--ink)}
-a{color:var(--teal)}
+a{color:var(--orange);text-decoration-color:var(--bright);text-underline-offset:2px}
+a:hover{color:var(--red)}
 hr{border:0;border-top:1px solid var(--line);margin:36px 0}
-blockquote{margin:16px 0;padding:14px 18px;background:#fff;border-left:5px solid var(--emerald);border-radius:12px;color:var(--ink)}
+blockquote{margin:16px 0;padding:14px 18px;background:var(--peach);border-left:5px solid var(--bright);border-radius:12px;color:var(--ink)}
 blockquote p{margin:0}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;margin:14px 0;font-size:15px;box-shadow:0 1px 0 var(--line)}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ECE6DC;vertical-align:top}
-th{background:var(--mist);color:var(--teal);font-weight:600}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;margin:14px 0;font-size:15px;box-shadow:0 0 0 1px var(--line)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--peach);color:var(--orange);font-weight:600}
 thead:has(th:empty){display:none}
-pre{background:var(--ink);color:#F5EFE6;padding:16px;border-radius:12px;overflow:auto;font-size:14px;line-height:1.5}
+pre{background:var(--ink);color:var(--peach);padding:16px;border-radius:12px;overflow:auto;font-size:14px;line-height:1.5}
 code{font-family:ui-monospace,Menlo,monospace;font-size:.92em}
-td code,p code,li code{background:var(--mist);color:var(--teal);padding:1px 6px;border-radius:6px}
+td code,p code,li code{background:var(--peach);color:var(--orange);padding:1px 6px;border-radius:6px}
 .sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid rgba(0,0,0,.15)}
 .wrap{overflow-x:auto}
+.btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:12px;margin:8px 0 16px}
+.btn:hover{background:var(--red);color:#fff}
+figure{margin:18px 0 28px}
+figure img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:var(--peach)}
+figcaption{color:var(--slate);font-size:14px;margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr;gap:8px}
 footer{text-align:center;color:var(--slate);font-size:14px;padding:0 20px 40px}
 </style></head><body>
 <header class="hero"><div class="in"><div class="tag">UX Case Study · 2026 · Clement Olatunde</div><h1>Complat</h1>
@@ -63,7 +71,7 @@ footer{text-align:center;color:var(--slate);font-size:14px;padding:0 20px 40px}
 </tr>
 <tr>
 <td><strong>Status</strong></td>
-<td>Case study and design plan. High-fidelity screens (about 60) are being built in Figma next.</td>
+<td>60 high-fidelity screens designed in Figma (<a href="https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/">view all 60 screens in Figma</a>). Usability testing is next.</td>
 </tr>
 </tbody>
 </table></div>
@@ -796,11 +804,11 @@ Receipts ───── Receipts &amp; payment history
 <li><strong>Low literacy, low data.</strong> Amount-first number pads, icons paired with short labels, date chips (Today, Friday, Month-end), English and Nigerian Pidgin copy with Yoruba, Hausa and Igbo as planned languages. Works offline and syncs later. Light screens, no heavy images.</li>
 <li><strong>Accessible by default.</strong> WCAG 2.1 AA contrast (4.5:1 for body text), 48 dp touch targets, minimum 16 px body text, status never shown by colour alone (always icon + label), screen-reader labels.</li>
 <li><strong>Naira done right.</strong> Always ₦ with thousands separators (₦185,000), no kobo unless entered, and large, legible balances.</li>
-<li><strong>Calm, not alarming.</strong> Overdue is shown in a muted clay, not alarm-red, with a clear next step beside it.</li>
+<li><strong>Calm, not alarming.</strong> Overdue is shown as a polite chip (Deep Red text on a soft red tint, with a clock icon), never an alarm, with a clear next step beside it.</li>
 </ol>
 <hr />
 <h2>10. Visual direction</h2>
-<p><strong>Mood:</strong> calm, trustworthy, warm, closer to a well-kept ledger book than a flashy fintech. A deep teal/emerald family on warm sand, with blended (not clashing) status colours. No gold.</p>
+<p><strong>Mood:</strong> warm, energetic and market-friendly, like a busy, well-run shop: orange, red and white, white-dominant so it stays clean and elegant. No green, per the designer's direction. Status colours blend within the same warm family.</p>
 <h3>Palette</h3>
 <div class="wrap"><table>
 <thead>
@@ -808,73 +816,67 @@ Receipts ───── Receipts &amp; payment history
 <th>Token</th>
 <th>Hex</th>
 <th>Use</th>
-<th>Contrast (measured)</th>
+<th>Contrast (measured, WCAG AA 4.5:1)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Deep Teal (primary)</td>
-<td><span class="sw" style="background:#0E5E5A"></span><code>#0E5E5A</code></td>
-<td>Primary buttons, headers, key numbers</td>
-<td>7.59:1 on white, 6.64:1 on Sand — AA</td>
+<td>White (background)</td>
+<td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td>
+<td>App and page background</td>
+<td>Text sits on it: Ink 17.88:1, Warm Slate 8.19:1, Burnt Orange 5.18:1 — AA</td>
 </tr>
 <tr>
-<td>Emerald</td>
-<td><span class="sw" style="background:#1E7A62"></span><code>#1E7A62</code></td>
-<td>Paid / success, positive trend</td>
-<td>5.23:1 on white — AA; 4.53:1 on its tint <code>#E3F2EC</code> — AA</td>
-</tr>
-<tr>
-<td>Ink</td>
-<td><span class="sw" style="background:#13262B"></span><code>#13262B</code></td>
-<td>Body text, headings</td>
-<td>15.67:1 on white — AAA</td>
-</tr>
-<tr>
-<td>Slate</td>
-<td><span class="sw" style="background:#4E5F63"></span><code>#4E5F63</code></td>
-<td>Secondary text, captions</td>
-<td>6.69:1 on white, 5.85:1 on Sand — AA</td>
-</tr>
-<tr>
-<td>Sand</td>
-<td><span class="sw" style="background:#F5EFE6"></span><code>#F5EFE6</code></td>
-<td>App background (warm)</td>
-<td>surface</td>
-</tr>
-<tr>
-<td>Mist</td>
-<td><span class="sw" style="background:#E7F1EF"></span><code>#E7F1EF</code></td>
-<td>Cards and selected states (cool tint)</td>
-<td>Deep Teal on Mist 6.59:1 — AA</td>
-</tr>
-<tr>
-<td>Clay</td>
-<td><span class="sw" style="background:#A8482F"></span><code>#A8482F</code></td>
-<td>Overdue (calm, non-alarm)</td>
-<td>5.78:1 on white; 4.85:1 on its tint <code>#F8E8E2</code> — AA</td>
-</tr>
-<tr>
-<td>Dusk</td>
-<td><span class="sw" style="background:#36507A"></span><code>#36507A</code></td>
-<td>Due soon / info / promised</td>
-<td>8.12:1 on white; 6.91:1 on tint <code>#E8EDF5</code> — AA</td>
+<td>Peach Mist</td>
+<td><span class="sw" style="background:#FFF4EC"></span><code>#FFF4EC</code></td>
+<td>Cards and surfaces</td>
+<td>Burnt Orange on Peach Mist 4.78:1 — AA; Ink 16.52:1</td>
 </tr>
 <tr>
 <td>Line</td>
-<td><span class="sw" style="background:#D9D2C6"></span><code>#D9D2C6</code></td>
+<td><span class="sw" style="background:#F3DCCB"></span><code>#F3DCCB</code></td>
 <td>Dividers and borders only (not text)</td>
 <td>decorative</td>
 </tr>
 <tr>
-<td>White</td>
-<td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td>
-<td>Cards, text on Deep Teal</td>
-<td>white on Deep Teal 7.59:1 — AA</td>
+<td>Burnt Orange (primary)</td>
+<td><span class="sw" style="background:#C2410C"></span><code>#C2410C</code></td>
+<td>Primary buttons, active nav, headings, key numbers</td>
+<td>5.18:1 on white, 4.78:1 on Peach Mist — AA; white text on it 5.18:1</td>
+</tr>
+<tr>
+<td>Bright Orange</td>
+<td><span class="sw" style="background:#F97316"></span><code>#F97316</code></td>
+<td>Charts, progress and highlights only — never text</td>
+<td>decorative (not used for text)</td>
+</tr>
+<tr>
+<td>Deep Red (secondary)</td>
+<td><span class="sw" style="background:#B42318"></span><code>#B42318</code></td>
+<td>Secondary accent and emphasis; header gradient <code>#C2410C</code> → <code>#B42318</code></td>
+<td>white on Deep Red 6.57:1 — AA</td>
+</tr>
+<tr>
+<td>Soft Red tint</td>
+<td><span class="sw" style="background:#FDECEA"></span><code>#FDECEA</code></td>
+<td>Polite overdue chips (with clock icon), Deep Red text</td>
+<td>Deep Red on its tint 5.75:1 — AA</td>
+</tr>
+<tr>
+<td>Ink</td>
+<td><span class="sw" style="background:#1F1512"></span><code>#1F1512</code></td>
+<td>Body text, headings</td>
+<td>17.88:1 on white — AAA</td>
+</tr>
+<tr>
+<td>Warm Slate</td>
+<td><span class="sw" style="background:#5E4B43"></span><code>#5E4B43</code></td>
+<td>Secondary text, captions</td>
+<td>8.19:1 on white — AA</td>
 </tr>
 </tbody>
 </table></div>
-<p>Blend: the background shifts from Sand to Mist across sections. The primary hero card uses a soft gradient from <code>#0E5E5A</code> to <code>#1E7A62</code>, with white text kept at ≥ 5.2:1 at the lightest point.</p>
+<p>Paid / settled: a Burnt Orange check icon with “Paid” in Ink on Peach Mist (status is never shown by colour alone). Overdue: Deep Red text on the Soft Red tint with a clock icon and polite copy. Headers and the hero balance card use a gradient from <code>#C2410C</code> to <code>#B42318</code>, with white text at ≥ 5.18:1 at the lightest point.</p>
 <h3>Typography</h3>
 <div class="wrap"><table>
 <thead>
@@ -905,6 +907,18 @@ Receipts ───── Receipts &amp; payment history
 <h3>Components (planned)</h3>
 <p>Balance card · status chip (icon + label: Due today, Overdue, Part-paid, Promised, Settled) · customer row · number pad · date chips · tone selector · WhatsApp preview bubble · forecast bar chart · bottom sheet · offline banner.</p>
 <p><em>Illustrative dashboard data used in mock-ups: total outstanding ₦185,000; overdue ₦65,000; Customer A, Invoice #001, due today, ₦25,000; Customer B, Invoice #002, 7 days overdue, ₦40,000. These are illustrative figures for a proposed design, not live business data.</em></p>
+<hr />
+<h2 id="final-ui">Final UI</h2>
+<p>The 60 high-fidelity screens, built in Figma in the orange, red and white palette.</p>
+<p><a class="btn" href="https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/" target="_blank" rel="noopener">View all 60 screens in Figma →</a></p>
+<figure><img src="images/complat-overview-60-screens.jpg" alt="Overview of all 60 Complat screens in ten flows: onboarding, seller dashboard, customers, invoices and debts, reminders, payments, cash flow, customer side, settings, and empty, error and offline states, in orange, red and white" width="1600" height="3752"><figcaption>All 60 screens, by flow.</figcaption></figure>
+<h3>Close-ups</h3>
+<div class="grid">
+<figure><img src="images/closeup-dashboard-DB-01.jpg" alt="Seller dashboard (DB-01): an orange-to-red balance card with the total owed, quick actions and today's follow-ups with status chips; beside it, the Today's follow-ups list" loading="lazy" width="935" height="952"><figcaption>Seller dashboard (DB-01) and Today's follow-ups</figcaption></figure>
+<figure><img src="images/closeup-add-debt-IN-01.jpg" alt="Sale on credit (IN-01): amount-first entry of ₦25,000 for Tunde Bakare with a number pad and a Burnt Orange Next: due date button; beside it, optional line items totalling ₦25,000" loading="lazy" width="935" height="952"><figcaption>Sale on credit (IN-01) and optional items</figcaption></figure>
+<figure><img src="images/closeup-reminder-RM-01.jpg" alt="Gentle reminder (RM-01): tone choice (Friendly, Gentle nudge, Firm & kind), a polite WhatsApp message to Chioma Eze about a ₦40,000 balance, a tone check and a Preview on WhatsApp button; beside it, reminder templates including one in Pidgin" loading="lazy" width="935" height="952"><figcaption>Gentle reminder (RM-01) and reminder templates</figcaption></figure>
+<figure><img src="images/closeup-customer-balance-CS-04.jpg" alt="Customer side: My balances (₦46,000 to 3 sellers) on an orange-to-red card, a seller balance of ₦25,000 with Pay now, Promise a date and More time, and the Pay now screen with bank transfer details" loading="lazy" width="1340" height="952"><figcaption>Customer side: My balances, a seller's balance (CS-04) and Pay now</figcaption></figure>
+</div>
 <hr />
 <h2>11. Key design decisions</h2>
 <div class="wrap"><table>
@@ -1014,11 +1028,11 @@ Receipts ───── Receipts &amp; payment history
 <hr />
 <h2>14. Next steps</h2>
 <ol>
-<li>Build the 60 high-fidelity screens in Figma, using this palette, type scale and inventory.</li>
+<li><s>Build the 60 high-fidelity screens in Figma</s> Done: <a href="https://www.figma.com/design/Ajzn8Jzz3roathlYWGitjs/">all 60 screens in Figma</a>, in the orange, red and white palette above.</li>
 <li>Create the component library and auto-layout system (all screens aligned to the 8-pt grid).</li>
 <li>Prototype the two core journeys (seller and customer) end to end.</li>
 <li>Run the usability tests above with traders and their customers; iterate on findings.</li>
-<li>Update this case study with final screens and test results.</li>
+<li>Update this case study with test results.</li>
 </ol>
 <hr />
 <p><em>Case study by Clement Olatunde, UX/UI Designer, Akure, Nigeria · 2026.</em></p></main>
